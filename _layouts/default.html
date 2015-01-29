@@ -3,18 +3,37 @@
 
   {% include head.html %}
 
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+ <body>
+        <div class="site_container clearfix">
+        <header class="clearfix" role="banner">
+            <div class="container header">
+               {% include header.html %}
+              
+                <nav class="main_nav clearfix" role="navigation">
+                    {% include main_nav.html %}
+                </nav>
+            </div>
+        </header>
+        <main role="main">
+            <div class="container main clearfix">
+               {{ content }}
+                <h2>Spencer Palmer</h2>
+                <h2>Web Design &amp; Development</h2>
+                <picture>
+                    <img class="container" srcset="/media/images/portfolioPic600.png" title="Spencer Palmer" alt="Spencer Palmer">
+                </picture>
+            </div>   
+         </main>
+        
+        
+            <footer class="clearfix" role="contentinfo">
+            <div class=" container footer clearfix">
+                {% include footer.html %}
+            
+               
+            </div>
+        </footer>
+        </div>
+    </body>
 </html>
+

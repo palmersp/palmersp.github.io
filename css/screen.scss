@@ -3,12 +3,25 @@
 
 @import 'normalize';
 
+$accent10: #3498db;
+$color3: #d76817;
+$color5: #00d2a5;
+$extra: #464646;
+
+$navigation: #dadada;
+$links: #00a6b6;
+$background: #dadada;
+$opposingBackground: black;
+$accents: #2c3e50;
+// $headings: ;
+// $text: ;
+
 *{
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .site_container {
-  background-color: #f1f1f1;
+  background-color: $background;
 }
 .container {
 }
@@ -18,7 +31,7 @@
 }
 header[role=banner] {
   /*min-height: 246px;*/
-  background-color: black;
+  background-color: $opposingBackground;
   color: white;
   h1 {
     margin: 0;
@@ -28,7 +41,8 @@ header[role=banner] {
     width: 200px;
     display: block;
     margin: 0 auto;
-    fill: currentColor;
+    // fill: currentColor;
+    fill: $navigation;
   }
 }
 .main_nav {
@@ -61,7 +75,7 @@ header[role=banner] {
   transition-property: background;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: inset 0 0 0 4px #f1f1f1, 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 4px $navigation, 0 0 1px rgba(0, 0, 0, 0);
   /* Hack to improve aliasing on mobile/tablet devices */
   &:hover, &:focus, &:active {
     background: none;
@@ -73,9 +87,9 @@ header[role=banner] {
   margin: 8px 4px;
   /*padding: 1em;*/
   cursor: pointer;
-  background: #f1f1f1;
+  background: $navigation;
   text-decoration: none;
-  color: #000;
+  color: $opposingBackground;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -108,15 +122,17 @@ img{
     width: 25%;
     padding: 10px;
     // background-color: white;
-    // border: solid black 2px;
+    // border: solid $opposingBackground 2px;
     margin: 4px;
   }
   .post-link {
     text-decoration: none;
+    color: $links;
+
     img {
     padding: 40px;
-    border: solid black 4px;
-    background-color: #f1f1f1;
+    border: solid $accents 4px;
+    background-color: $background;
     border-radius: 10px;
 
     display: inline-block;
@@ -133,7 +149,7 @@ img{
     transition-property: transform;
 
     &:hover, &:focus, &:active {
-      background-color: white;
+      background-color: $accents;
       -webkit-transform: scale(1.05);
       transform: scale(1.05);
     }
@@ -158,7 +174,6 @@ img{
 /* Huge Screen Media Query */
 @media screen and (min-width: 1280px){
     .site_container{
-   background-color: #f1f1f1;
 
 }
 .container{
@@ -186,20 +201,3 @@ h2 {
 
 
 }
-/* Media Queries for Mormon.org/Christmas
-@media screen and (max-width:500px){
-
-}
-@media screen and (max-device-width:800px){
-
-}
-@media screen and (max-width:1169px){
-
-}
-@media screen and (max-width: 1100px){
-
-}
-@media screen and (max-width:767px){
-
-}
-*/

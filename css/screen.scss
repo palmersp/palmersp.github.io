@@ -3,6 +3,12 @@
 
 @import 'normalize';
 
+@font-face {
+  font-family: 'h2';
+  src: url('/media/fonts/PoetsenOne-Regular.ttf') format('truetype');
+}
+
+
 // $accent10: #3498db;
 $color3: #d76817;
 $color5: #00d2a5;
@@ -106,7 +112,8 @@ h1 a{
 
 
 h2{
-
+  font-family: 'h2', sans-serif;
+  font-size: 40px;
 }
 img{
    max-width: 100%;

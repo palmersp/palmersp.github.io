@@ -4,9 +4,14 @@
 @import 'normalize';
 
 @font-face {
-  font-family: 'h2';
+  font-family: 'headings';
   src: url('/media/fonts/PoetsenOne-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'bodyCopy';
+  src: url('/media/fonts/AndrijType - BanderaText-Medium.otf') format('opentype');
+}
+
 
 
 // $accent10: #3498db;
@@ -28,6 +33,8 @@ $accents: #2c3e50;
 }
 .site_container {
   background-color: $background;
+  font-family: bodyCopy, serif;
+  font-size: 16px;
 }
 .container {
 }
@@ -112,7 +119,7 @@ h1 a{
 
 
 h2{
-  font-family: 'h2', sans-serif;
+  font-family: headings, sans-serif;
   font-size: 40px;
 }
 img{

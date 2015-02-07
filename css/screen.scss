@@ -1,5 +1,10 @@
 ---
 ---
+/*******************************************************************************/
+/*******************************************************************************/
+/*Imports, font face, and variables*********************************************/
+/*******************************************************************************/
+/*******************************************************************************/
 
 @import 'normalize';
 
@@ -24,8 +29,12 @@ $links: #00a6b6;
 $background: #dadada;
 $opposingBackground: black;
 $accents: #2c3e50;
-// $headings: ;
-// $text: ;
+
+/*******************************************************************************/
+/*******************************************************************************/
+/*Globals***********************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
 
 *{
   -moz-box-sizing: border-box;
@@ -38,67 +47,65 @@ $accents: #2c3e50;
 }
 .container {
 }
-.clearfix {
-}
-.header {
-}
-.home {
-  display: flex;
-  flex-direction: column;
-  // align-content: flex-start;
-  // align-items: flex-start;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
-  .post-list {
-    // order: 1;
-  }
-  h2{
-    // order: 2;
-  }
-  img {
-    // order: 3;
-    align-self: flex-start;
-  }
-  button{
-    // order: 4;
-    align-self: flex-start;
-  }
-  p{
-    // order: 5;
-  }
-  }
-
-header[role=banner] {
-  /*min-height: 246px;*/
-  background-color: $opposingBackground;
-  color: white;
-  h1 {
-    margin: 0;
-    color: #FFF;
-  }
-  svg {
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    // fill: currentColor;
-    fill: $navigation;
-  }
-}
-.main_nav {
-
-}
 
 //basic styles for all navigation
 [role=navigation] {
   li {
     list-style-type: none;
   }
-  ul {
-     padding: 0;
-    //  width: 261px;
-     margin: 0 auto;
+}
+/*Headings**********************************************************************/
+h2{
+  font-family: headings, sans-serif;
+  font-size: 40px;
+}
+/*Images************************************************************************/
+img{
+   max-width: 100%;
+   height: auto;
+}
+
+/*******************************************************************************/
+/*******************************************************************************/
+/*Page Layout*******************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+.site_container {
+  display: flex;
+  flex-direction: column;
+  header{
+    order: 1;
+  }
+  main{
+    order: 2;
+  }
+  footer{
+    order: 3;
   }
 }
+
+
+/*******************************************************************************/
+/*******************************************************************************/
+/*Page Structure****************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
+
+/*Header styles*****************************************************************/
+header[role=banner] {
+  background-color: $opposingBackground;
+  h1 {
+    margin: 0;
+  }
+  svg {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    fill: $navigation;
+  }
+}
+
+/*Main Nav styles***************************************************************/
 
 // style navigation inside of of my main nav
 .main_nav[role=navigation] {
@@ -111,10 +118,8 @@ header[role=banner] {
     align-items: center ;
     -webkit-justify-content: center;
     justify-content: center;
-  }
-
-  li {
-    // display: inline;
+    padding: 0;
+    margin: 0 auto
   }
   a {
     padding: 10px 7px 10px;
@@ -147,45 +152,44 @@ header[role=banner] {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.main{
+/*******************************************************************************/
+/*******************************************************************************/
+/*Page Specific*****************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
 
-}
-.footer{
-
-}
-
-h1 a{
-
-}
-
-
-h2{
-  font-family: headings, sans-serif;
-  font-size: 40px;
-}
-img{
-   max-width: 100%;
-   height: auto;
-}
-
-.post-list {
-  // float: left;
-  // display: inline-block;
-  // width: 25%;
+/*Home Page*********************************************************************/
+// Flex for Home Page
+.home {
   display: flex;
-  // flex-direction: row;
+  flex-direction: column;
+  .post-list {
+    // order: 1;
+  }
+  h2{
+    // order: 2;
+  }
+  img {
+    // order: 3;
+    align-self: flex-start;
+  }
+  button{
+    // order: 4;
+    align-self: flex-start;
+  }
+  p{
+    // order: 5;
+  }
+  }
+
+// Home page post flex
+.post-list {
+  display: flex;
   align-content: center;
   justify-content: center;
-  // flex-wrap: wrap;
   flex-flow: row wrap;
-
   li {
-    // display: inline-block;
-    // width: 25%;
     padding: 10px;
-    // background-color: white;
-    // border: solid $opposingBackground 2px;
-    // margin: 4px;
     margin: auto;
     list-style-type: none;
   }
@@ -193,15 +197,12 @@ img{
     text-decoration: none;
     color: $links;
 
+// post image hover styles
     img {
     padding: 40px;
     border: solid $accents 4px;
     background-color: $background;
     border-radius: 10px;
-    // min-width: 250px;
-    // min-height: 175px;
-
-    // display: inline-block;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -221,13 +222,16 @@ img{
     }
   }
 
-}
-  img {
-    // width: 250px;
-    // height: 175px;
-
   }
+
 }
+
+
+/*******************************************************************************/
+/*******************************************************************************/
+/*Repsonsiveness****************************************************************/
+/*******************************************************************************/
+/*******************************************************************************/
 
 /* Medium Screen Media Query (Tablets) */
 @media screen and (min-width: 481px){
@@ -239,31 +243,5 @@ img{
 }
 /* Huge Screen Media Query */
 @media screen and (min-width: 1280px){
-    .site_container{
-
-}
-.container{
-   max-width: 1280px;
-
-}
-.clearfix{
-
-}
-.header{
-
-}
-.main_nav{
-
-}
-.main{
-
-}
-.footer{
-
-}
-h2 {
-
-}
-
 
 }

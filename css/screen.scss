@@ -46,12 +46,17 @@ $accents: #2c3e50;
   font-size: 16px;
 }
 .container {
+  max-width: 1280px;
+  margin: auto;
 }
 
-//basic styles for all navigation
+/*Basic Style for all navigation************************************************/
 [role=navigation] {
   li {
     list-style-type: none;
+  }
+  a{
+    text-decoration: none;
   }
 }
 /*Headings**********************************************************************/
@@ -119,39 +124,31 @@ header[role=banner] {
     -webkit-justify-content: center;
     justify-content: center;
     padding: 0;
-    margin: 0 auto
-  }
-  a {
-    padding: 10px 7px 10px;
+    margin: 0 auto;
+    a {
+      // style the link
+      padding: 10px 7px 10px;
+      margin: 8px 4px;
+      background: $navigation;
+      color: $opposingBackground;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      //hollow out link
+      display: inline-block;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: background;
+      transition-property: background;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      box-shadow: inset 0 0 0 4px $navigation, 0 0 1px rgba(0, 0, 0, 0);
+      /* improve aliasing on mobile/tablet devices */
+      &:hover, &:focus, &:active {
+        background: none;
+        color: #fff;
+      }
+    }
   }
 }
- /* Hollow */
-.hollow {
-  display: inline-block;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: background;
-  transition-property: background;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: inset 0 0 0 4px $navigation, 0 0 1px rgba(0, 0, 0, 0);
-  /* Hack to improve aliasing on mobile/tablet devices */
-  &:hover, &:focus, &:active {
-    background: none;
-    color: #fff;
-  }
-}
-/* Default styles for the demo buttons */
-.button {
-  margin: 8px 4px;
-  /*padding: 1em;*/
-  cursor: pointer;
-  background: $navigation;
-  text-decoration: none;
-  color: $opposingBackground;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 /*******************************************************************************/
 /*******************************************************************************/
 /*Page Specific*****************************************************************/
@@ -239,6 +236,19 @@ header[role=banner] {
 }
 /* Large Screen Media Query */
 @media screen and (min-width: 768px) {
+  .site_container {
+    display: flex;
+    flex-direction: row;
+    header{
+      order: 1;
+    }
+    main{
+      order: 2;
+    }
+    footer{
+      order: 3;
+    }
+  }
 
 }
 /* Huge Screen Media Query */

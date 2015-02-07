@@ -61,19 +61,34 @@ header[role=banner] {
 .main_nav {
 
 }
+
+//basic styles for all navigation
 [role=navigation] {
   li {
     list-style-type: none;
   }
   ul {
      padding: 0;
-     width: 261px;
+    //  width: 261px;
      margin: 0 auto;
   }
 }
+
+// style navigation inside of of my main nav
 .main_nav[role=navigation] {
+  ul {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center ;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
   li {
-    display: inline;
+    // display: inline;
   }
   a {
     padding: 10px 7px 10px;
@@ -131,13 +146,22 @@ img{
   // float: left;
   // display: inline-block;
   // width: 25%;
+  display: flex;
+  // flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  // flex-wrap: wrap;
+  flex-flow: row wrap;
+
   li {
-    display: inline-block;
-    width: 25%;
+    // display: inline-block;
+    // width: 25%;
     padding: 10px;
     // background-color: white;
     // border: solid $opposingBackground 2px;
-    margin: 4px;
+    // margin: 4px;
+    margin: auto;
+    list-style-type: none;
   }
   .post-link {
     text-decoration: none;
@@ -148,8 +172,10 @@ img{
     border: solid $accents 4px;
     background-color: $background;
     border-radius: 10px;
+    // min-width: 250px;
+    // min-height: 175px;
 
-    display: inline-block;
+    // display: inline-block;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);

@@ -4,31 +4,30 @@
   {% include head.html %}
 
  <body>
-        <div class="site_container clearfix">
-        <header class="clearfix" role="banner">
+        <div class="site_container">
+        <header role="banner">
             <div class="container header">
                {% include header.html %}
-              
-                <nav class="main_nav clearfix" role="navigation">
+
+                <nav class="main_nav" role="navigation">
                     {% include main_nav.html %}
                 </nav>
             </div>
         </header>
         <main role="main">
-            <div class="container main clearfix">
+            <div class="container main">
                {{ content }}
-             </div>  
+             </div>
          </main>
+
         
-        
-            <footer class="clearfix" role="contentinfo">
-            <div class=" container footer clearfix">
+            <footer role="contentinfo">
+            <div class=" container footer">
                 {% include footer.html %}
-            
-               
+
+
             </div>
         </footer>
         </div>
     </body>
 </html>
-

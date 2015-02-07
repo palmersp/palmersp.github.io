@@ -42,6 +42,32 @@ $accents: #2c3e50;
 }
 .header {
 }
+.home {
+  display: flex;
+  flex-direction: column;
+  // align-content: flex-start;
+  // align-items: flex-start;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+  .post-list {
+    // order: 1;
+  }
+  h2{
+    // order: 2;
+  }
+  img {
+    // order: 3;
+    align-self: flex-start;
+  }
+  button{
+    // order: 4;
+    align-self: flex-start;
+  }
+  p{
+    // order: 5;
+  }
+  }
+
 header[role=banner] {
   /*min-height: 246px;*/
   background-color: $opposingBackground;

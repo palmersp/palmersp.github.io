@@ -14,5 +14,5 @@ github_username:  palmersp
 
 # Build settings
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 permalink: /:title/

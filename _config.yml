@@ -13,6 +13,6 @@ sass:
 github_username:  palmersp
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 highlighter: null
 permalink: /:title/
